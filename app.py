@@ -1,6 +1,11 @@
 from flask import Flask
 
-app = Flask(__name__)
+app = Flaskapp = FastAPI(
+    title="Waka AI App",
+    version="1.0.0",
+    docs_url="/docs",        # Optional: explicitly enables /docs
+    redoc_url="/redoc",      # Optional: enables /redoc
+)
 
 @app.route('/')
 def home():
